@@ -1,0 +1,1203 @@
+
+## Processing file tune_dtc.csv ###
+
+Found parameters ['feature', 'depth', 'bins']
+Results shape (360, 9)
+feature ['cdk_fp', 'cdk_desc', 'rdkit_desc', 'rdkit_fp']
+depth [30, 20, 15, 10, 5]
+bins [128, 64, 32]
+Min summary shape (6, 9)
+Iterating over:
+feature: ['cdk_fp', 'cdk_desc', 'rdkit_desc', 'rdkit_fp']
+depth: [30, 20, 15, 10, 5]
+bins: [128, 64, 32]
+Best common settings:
+feature -> rdkit_desc
+depth -> 5
+bins -> 128
+rmse -> 0.0218431234476905
+Best summary shape (6, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/classification/tune_dtc_summary.csv
+Mean common metric 0.7532432729895269 global metric 0.7350728703588333
+global to common RMSE is 0.0218431234476905
+Summary shape (6, 4)
+Category shape (12, 3)
+
+## Processing file tune_rfc.csv ###
+
+Found parameters ['feature', 'depth', 'trees']
+Results shape (600, 9)
+feature ['cdk_fp', 'cdk_desc', 'rdkit_desc', 'rdkit_fp']
+depth [30, 20, 15, 10, 5]
+trees [50, 40, 30, 20, 10]
+Min summary shape (6, 9)
+Iterating over:
+feature: ['cdk_fp', 'cdk_desc', 'rdkit_desc', 'rdkit_fp']
+depth: [30, 20, 15, 10, 5]
+trees: [50, 40, 30, 20, 10]
+Best common settings:
+feature -> cdk_desc
+depth -> 10
+trees -> 50
+rmse -> 0.0174594076700945
+Best summary shape (6, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/classification/tune_rfc_summary.csv
+Mean common metric 0.8565744753131869 global metric 0.8447645001950006
+global to common RMSE is 0.0174594076700945
+Summary shape (6, 4)
+Category shape (12, 3)
+
+## Processing file tune_smile_nb.csv ###
+
+Found parameters ['alpha', 'featuresColumn', 'sub_method']
+Results shape (112, 9)
+alpha [2.0, 1.0, 0.5, 0.0]
+featuresColumn ['cdk_fp', 'rdkit_fp']
+sub_method ['Multinomial', 'Bernoulli']
+Min summary shape (7, 9)
+Iterating over:
+alpha: [2.0, 1.0, 0.5, 0.0]
+featuresColumn: ['cdk_fp', 'rdkit_fp']
+sub_method: ['Multinomial', 'Bernoulli']
+Best common settings:
+alpha -> 0.5
+featuresColumn -> rdkit_fp
+sub_method -> Bernoulli
+rmse -> 0.0165428415184421
+Best summary shape (7, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/classification/tune_smile_nb_summary.csv
+Mean common metric 0.8119095487962447 global metric 0.798360516477541
+global to common RMSE is 0.0165428415184421
+Summary shape (7, 4)
+Category shape (14, 3)
+
+## Processing file tune_nb_mn.csv ###
+
+Found parameters ['feature', 'smoothing']
+Results shape (160, 8)
+feature ['rdkit_ecfp', 'cdk_fcfp', 'rdkit_fcfp', 'cdk_ecfp']
+smoothing [0.20000000000000001, 25.0, 10.0, 5.0, 1.0]
+Min summary shape (8, 8)
+Iterating over:
+feature: ['rdkit_ecfp', 'cdk_fcfp', 'rdkit_fcfp', 'cdk_ecfp']
+smoothing: [0.20000000000000001, 25.0, 10.0, 5.0, 1.0]
+Best common settings:
+feature -> cdk_ecfp
+smoothing -> 0.2
+rmse -> 0.015341061582017845
+Best summary shape (8, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/classification/tune_nb_mn_summary.csv
+Mean common metric 0.8078331496909554 global metric 0.7974350924275748
+global to common RMSE is 0.015341061582017845
+Summary shape (8, 4)
+Category shape (16, 3)
+
+## Processing file tune_lsvc_fp.csv ###
+
+Found parameters ['feature', 'nfolds', 'maxIter', 'reg']
+Results shape (432, 10)
+feature ['cdk_fp', 'rdkit_fp']
+nfolds [1000, 1500, 2000]
+maxIter [100, 50, 10]
+reg [0.10000000000000001, 0.01, 0.029999999999999999, 1.0]
+Min summary shape (6, 10)
+Iterating over:
+feature: ['cdk_fp', 'rdkit_fp']
+nfolds: [1000, 1500, 2000]
+maxIter: [100, 50, 10]
+reg: [0.10000000000000001, 0.01, 0.029999999999999999, 1.0]
+Best common settings:
+feature -> rdkit_fp
+nfolds -> 1500
+maxIter -> 100
+reg -> 1.0
+rmse -> 0.017863273227906793
+Best summary shape (6, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/classification/tune_lsvc_fp_summary.csv
+Mean common metric 0.8174283743427466 global metric 0.8019193460971245
+global to common RMSE is 0.017863273227906793
+Summary shape (6, 4)
+Category shape (12, 3)
+
+## Processing file tune_weka_nb_bn.csv ###
+
+Found parameters ['featuresColumn']
+Results shape (14, 7)
+featuresColumn ['cdk_fp', 'rdkit_fp']
+Min summary shape (7, 7)
+Iterating over:
+featuresColumn: ['cdk_fp', 'rdkit_fp']
+Best common settings:
+featuresColumn -> rdkit_fp
+rmse -> 0.003122420281528824
+Best summary shape (7, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/classification/tune_weka_nb_bn_summary.csv
+Mean common metric 0.7434989659695875 global metric 0.74174170409536
+global to common RMSE is 0.003122420281528824
+Summary shape (7, 4)
+Category shape (14, 3)
+
+## Processing file tune_svc_tanimoto_fp.csv ###
+
+Found parameters ['C', 'coef0', 'featuresColumn', 'degree']
+Results shape (960, 10)
+C [0.10000000000000001, 0.01, 0.001, 10.0, 1.0]
+coef0 [3.0, 2.0, 1.0, 0.0]
+featuresColumn ['cdk_fp', 'rdkit_fp']
+degree [5, 4, 3, 2]
+Min summary shape (6, 10)
+Iterating over:
+C: [0.10000000000000001, 0.01, 0.001, 10.0, 1.0]
+coef0: [3.0, 2.0, 1.0, 0.0]
+featuresColumn: ['cdk_fp', 'rdkit_fp']
+degree: [5, 4, 3, 2]
+Best common settings:
+C -> 1.0
+coef0 -> 1.0
+featuresColumn -> cdk_fp
+degree -> 2
+rmse -> 0.0051694141594475496
+Best summary shape (6, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/classification/tune_svc_tanimoto_fp_summary.csv
+Mean common metric 0.8428131107484002 global metric 0.8382229272191205
+global to common RMSE is 0.0051694141594475496
+Summary shape (6, 4)
+Category shape (12, 3)
+
+## Processing file tune_lsvc_fps.csv ###
+
+Found parameters ['feature', 'nfolds', 'maxIter', 'reg']
+Results shape (432, 10)
+feature ['cdk_fp', 'rdkit_fp']
+nfolds [1000, 1500, 2000]
+maxIter [100, 50, 10]
+reg [0.10000000000000001, 0.01, 0.029999999999999999, 1.0]
+Min summary shape (6, 10)
+Iterating over:
+feature: ['cdk_fp', 'rdkit_fp']
+nfolds: [1000, 1500, 2000]
+maxIter: [100, 50, 10]
+reg: [0.10000000000000001, 0.01, 0.029999999999999999, 1.0]
+Best common settings:
+feature -> cdk_fp
+nfolds -> 1500
+maxIter -> 10
+reg -> 1.0
+rmse -> 0.017697398321024217
+Best summary shape (6, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/classification/tune_lsvc_fps_summary.csv
+Mean common metric 0.826810353605647 global metric 0.812670574562755
+global to common RMSE is 0.017697398321024217
+Summary shape (6, 4)
+Category shape (12, 3)
+
+## Processing file tune_lsvc_descs.csv ###
+
+Found parameters ['feature', 'maxIter', 'reg']
+Results shape (192, 9)
+feature ['rdkit_desc', 'cdk_desc']
+maxIter [100, 50, 10]
+reg [0.029999999999999999, 0.10000000000000001, 0.01, 1.0]
+Min summary shape (8, 9)
+Iterating over:
+feature: ['rdkit_desc', 'cdk_desc']
+maxIter: [100, 50, 10]
+reg: [0.029999999999999999, 0.10000000000000001, 0.01, 1.0]
+Best common settings:
+feature -> cdk_desc
+maxIter -> 10
+reg -> 0.03
+rmse -> 0.00896736629351717
+Best summary shape (8, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/classification/tune_lsvc_descs_summary.csv
+Mean common metric 0.8023348199423421 global metric 0.7956420186204743
+global to common RMSE is 0.00896736629351717
+Summary shape (8, 4)
+Category shape (16, 3)
+
+## Processing file tune_lrc_descs.csv ###
+
+Found parameters ['feature', 'elasticNetParam', 'maxIter', 'reg']
+Results shape (576, 10)
+feature ['cdk_desc', 'rdkit_desc']
+elasticNetParam [0.90000000000000002, 0.80000000000000004, 0.69999999999999996]
+maxIter [100, 50, 10]
+reg [0.029999999999999999, 0.10000000000000001, 0.01, 1.0]
+Min summary shape (8, 10)
+Iterating over:
+feature: ['cdk_desc', 'rdkit_desc']
+elasticNetParam: [0.90000000000000002, 0.80000000000000004, 0.69999999999999996]
+maxIter: [100, 50, 10]
+reg: [0.029999999999999999, 0.10000000000000001, 0.01, 1.0]
+Best common settings:
+feature -> rdkit_desc
+elasticNetParam -> 0.7
+maxIter -> 50
+reg -> 0.01
+rmse -> 0.018911033526054298
+Best summary shape (8, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/classification/tune_lrc_descs_summary.csv
+Mean common metric 0.7735885950744102 global metric 0.7624083146025993
+global to common RMSE is 0.018911033526054298
+Summary shape (8, 4)
+Category shape (16, 3)
+
+## Processing file tune_nnc_desc.csv ###
+
+Found parameters ['layers', 'scalerType', 'featuresColumn', 'C']
+Results shape (360, 10)
+layers [100, 75, 50]
+scalerType ['Standard', 'MaxMin']
+featuresColumn ['cdk_desc', 'rdkit_desc']
+C [0.10000000000000001, 0.01, 0.001, 10.0, 1.0]
+Min summary shape (6, 10)
+Iterating over:
+layers: [100, 75, 50]
+scalerType: ['Standard', 'MaxMin']
+featuresColumn: ['cdk_desc', 'rdkit_desc']
+C: [0.10000000000000001, 0.01, 0.001, 10.0, 1.0]
+Best common settings:
+layers -> 75
+scalerType -> Standard
+featuresColumn -> cdk_desc
+C -> 0.1
+rmse -> 0.050339525993878385
+Best summary shape (6, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/classification/tune_nnc_desc_summary.csv
+Mean common metric 0.747539597301134 global metric 0.7128040348741435
+global to common RMSE is 0.050339525993878385
+Summary shape (6, 4)
+Category shape (12, 3)
+
+## Processing file tune_svc_lin_desc.csv ###
+
+Found parameters ['regularizationType', 'scalerType', 'featuresColumn', 'C']
+Results shape (320, 10)
+regularizationType ['L2', 'L1']
+scalerType ['MaxMin', 'Standard']
+featuresColumn ['rdkit_desc', 'cdk_desc']
+C [0.10000000000000001, 0.01, 0.001, 0.0001, 1.0]
+Min summary shape (8, 10)
+Iterating over:
+regularizationType: ['L2', 'L1']
+scalerType: ['MaxMin', 'Standard']
+featuresColumn: ['rdkit_desc', 'cdk_desc']
+C: [0.10000000000000001, 0.01, 0.001, 0.0001, 1.0]
+Best common settings:
+regularizationType -> L2
+scalerType -> MaxMin
+featuresColumn -> cdk_desc
+C -> 0.01
+rmse -> 0.014337858892645817
+Best summary shape (8, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/classification/tune_svc_lin_desc_summary.csv
+Mean common metric 0.8184811376324271 global metric 0.8055618572109429
+global to common RMSE is 0.014337858892645817
+Summary shape (8, 4)
+Category shape (16, 3)
+
+## Processing file tune_lsvc_desc.csv ###
+
+Found parameters ['feature', 'maxIter', 'reg']
+Results shape (192, 9)
+feature ['rdkit_desc', 'cdk_desc']
+maxIter [100, 50, 10]
+reg [0.029999999999999999, 0.10000000000000001, 0.01, 1.0]
+Min summary shape (8, 9)
+Iterating over:
+feature: ['rdkit_desc', 'cdk_desc']
+maxIter: [100, 50, 10]
+reg: [0.029999999999999999, 0.10000000000000001, 0.01, 1.0]
+Best common settings:
+feature -> rdkit_desc
+maxIter -> 100
+reg -> 0.03
+rmse -> 0.02180795865137358
+Best summary shape (8, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/classification/tune_lsvc_desc_summary.csv
+Mean common metric 0.7701387568153761 global metric 0.7519015837649566
+global to common RMSE is 0.02180795865137358
+Summary shape (8, 4)
+Category shape (16, 3)
+
+## Processing file tune_nb_bn.csv ###
+
+Found parameters ['feature', 'smoothing']
+Results shape (160, 8)
+feature ['rdkit_ecfp', 'cdk_fcfp', 'rdkit_fcfp', 'cdk_ecfp']
+smoothing [0.20000000000000001, 25.0, 10.0, 5.0, 1.0]
+Min summary shape (8, 8)
+Iterating over:
+feature: ['rdkit_ecfp', 'cdk_fcfp', 'rdkit_fcfp', 'cdk_ecfp']
+smoothing: [0.20000000000000001, 25.0, 10.0, 5.0, 1.0]
+Best common settings:
+feature -> rdkit_fcfp
+smoothing -> 0.2
+rmse -> 0.00930927025875233
+Best summary shape (8, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/classification/tune_nb_bn_summary.csv
+Mean common metric 0.8176673195264116 global metric 0.812180053465116
+global to common RMSE is 0.00930927025875233
+Summary shape (8, 4)
+Category shape (16, 3)
+
+## Processing file tune_lrc_fps.csv ###
+
+Found parameters ['feature', 'nfolds', 'elasticNetParam', 'maxIter', 'reg']
+Results shape (1296, 11)
+feature ['cdk_fp', 'rdkit_fp']
+nfolds [2000, 1500, 1000]
+elasticNetParam [0.80000000000000004, 0.69999999999999996, 0.90000000000000002]
+maxIter [100, 50, 10]
+reg [0.10000000000000001, 0.029999999999999999, 0.01, 1.0]
+Min summary shape (6, 11)
+Iterating over:
+feature: ['cdk_fp', 'rdkit_fp']
+nfolds: [2000, 1500, 1000]
+elasticNetParam: [0.80000000000000004, 0.69999999999999996, 0.90000000000000002]
+maxIter: [100, 50, 10]
+reg: [0.10000000000000001, 0.029999999999999999, 0.01, 1.0]
+Best common settings:
+feature -> rdkit_fp
+nfolds -> 1000
+elasticNetParam -> 0.7
+maxIter -> 10
+reg -> 0.01
+rmse -> 0.020923917351233938
+Best summary shape (6, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/classification/tune_lrc_fps_summary.csv
+Mean common metric 0.8243561608009582 global metric 0.8053852619383856
+global to common RMSE is 0.020923917351233938
+Summary shape (6, 4)
+Category shape (12, 3)
+
+## Processing file tune_svc_rbf_fp.csv ###
+
+Found parameters ['gamma', 'foldSize', 'featuresColumn', 'scalerType', 'C']
+Results shape (1800, 11)
+gamma [0.10000000000000001, 0.01, 0.001, 0.0001, 1.0]
+foldSize [2000, 1500, 1000]
+featuresColumn ['cdk_fp', 'rdkit_fp']
+scalerType ['Standard', 'MaxMin']
+C [0.10000000000000001, 0.01, 0.001, 10.0, 1.0]
+Min summary shape (6, 11)
+Iterating over:
+gamma: [0.10000000000000001, 0.01, 0.001, 0.0001, 1.0]
+foldSize: [2000, 1500, 1000]
+featuresColumn: ['cdk_fp', 'rdkit_fp']
+scalerType: ['Standard', 'MaxMin']
+C: [0.10000000000000001, 0.01, 0.001, 10.0, 1.0]
+Best common settings:
+gamma -> 0.001
+foldSize -> 1000
+featuresColumn -> rdkit_fp
+scalerType -> Standard
+C -> 10.0
+rmse -> 0.013978424990598558
+Best summary shape (6, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/classification/tune_svc_rbf_fp_summary.csv
+Mean common metric 0.8421021468649249 global metric 0.8283683509663812
+global to common RMSE is 0.013978424990598558
+Summary shape (6, 4)
+Category shape (12, 3)
+
+## Processing file tune_lrc_fp.csv ###
+
+Found parameters ['feature', 'nfolds', 'elasticNetParam', 'maxIter', 'reg']
+Results shape (1728, 11)
+feature ['cdk_fp', 'rdkit_fp']
+nfolds [2000, 1500, 1000]
+elasticNetParam [0.80000000000000004, 0.69999999999999996, 0.90000000000000002]
+maxIter [100, 50, 10]
+reg [0.10000000000000001, 0.029999999999999999, 0.01, 1.0]
+Min summary shape (8, 11)
+Iterating over:
+feature: ['cdk_fp', 'rdkit_fp']
+nfolds: [2000, 1500, 1000]
+elasticNetParam: [0.80000000000000004, 0.69999999999999996, 0.90000000000000002]
+maxIter: [100, 50, 10]
+reg: [0.10000000000000001, 0.029999999999999999, 0.01, 1.0]
+Best common settings:
+feature -> rdkit_fp
+nfolds -> 1500
+elasticNetParam -> 0.7
+maxIter -> 50
+reg -> 0.01
+rmse -> 0.02539436436357547
+Best summary shape (8, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/classification/tune_lrc_fp_summary.csv
+Mean common metric 0.7601993106497187 global metric 0.7420966057081109
+global to common RMSE is 0.02539436436357547
+Summary shape (8, 4)
+Category shape (16, 3)
+
+## Processing file tune_nnc_fp.csv ###
+
+Found parameters ['layers', 'foldSize', 'featuresColumn', 'scalerType', 'C']
+Results shape (1080, 11)
+layers [100, 75, 50]
+foldSize [2000, 1500, 1000]
+featuresColumn ['cdk_fp', 'rdkit_fp']
+scalerType ['Standard', 'MaxMin']
+C [0.10000000000000001, 0.01, 0.001, 10.0, 1.0]
+Min summary shape (6, 11)
+Iterating over:
+layers: [100, 75, 50]
+foldSize: [2000, 1500, 1000]
+featuresColumn: ['cdk_fp', 'rdkit_fp']
+scalerType: ['Standard', 'MaxMin']
+C: [0.10000000000000001, 0.01, 0.001, 10.0, 1.0]
+Best common settings:
+layers -> 50
+foldSize -> 1500
+featuresColumn -> rdkit_fp
+scalerType -> Standard
+C -> 0.1
+rmse -> 0.07878415013002875
+Best summary shape (6, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/classification/tune_nnc_fp_summary.csv
+Mean common metric 0.7558296142898699 global metric 0.7096302016544912
+global to common RMSE is 0.07878415013002875
+Summary shape (6, 4)
+Category shape (12, 3)
+
+## Processing file tune_svc_poly_desc.csv ###
+
+Found parameters ['degree', 'C', 'featuresColumn', 'scalerType', 'coef0']
+Results shape (1728, 11)
+degree [4, 3, 2]
+C [0.01, 0.10000000000000001, 1.0000000000000001e-05, 0.0001, 1.0]
+featuresColumn ['cdk_desc', 'rdkit_desc']
+scalerType ['Standard', 'MaxMin']
+coef0 [8.0, 6.0, 4.0, 2.0]
+Min summary shape (6, 11)
+Iterating over:
+degree: [4, 3, 2]
+C: [0.01, 0.10000000000000001, 1.0000000000000001e-05, 0.0001, 1.0]
+featuresColumn: ['cdk_desc', 'rdkit_desc']
+scalerType: ['Standard', 'MaxMin']
+coef0: [8.0, 6.0, 4.0, 2.0]
+Best common settings:
+degree -> 4
+C -> 0.0001
+featuresColumn -> cdk_desc
+scalerType -> MaxMin
+coef0 -> 4.0
+rmse -> 0.009859071561578421
+Best summary shape (6, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/classification/tune_svc_poly_desc_summary.csv
+Mean common metric 0.8282874314284037 global metric 0.820166309865375
+global to common RMSE is 0.009859071561578421
+Summary shape (6, 4)
+Category shape (12, 3)
+
+## Processing file tune_svc_poly_fp.csv ###
+
+Found parameters ['degree', 'C', 'foldSize', 'featuresColumn', 'scalerType', 'coef0']
+Results shape (4320, 12)
+degree [3, 2, 4]
+C [0.001, 0.01, 0.0001, 0.10000000000000001, 1.0]
+foldSize [2000, 1500, 1000]
+featuresColumn ['cdk_fp', 'rdkit_fp']
+scalerType ['MaxMin', 'Standard']
+coef0 [6.0, 4.0, 2.0, 0.0]
+Min summary shape (6, 12)
+Iterating over:
+degree: [3, 2, 4]
+C: [0.001, 0.01, 0.0001, 0.10000000000000001, 1.0]
+foldSize: [2000, 1500, 1000]
+featuresColumn: ['cdk_fp', 'rdkit_fp']
+scalerType: ['MaxMin', 'Standard']
+coef0: [6.0, 4.0, 2.0, 0.0]
+Best common settings:
+degree -> 2
+C -> 0.01
+foldSize -> 2000
+featuresColumn -> rdkit_fp
+scalerType -> MaxMin
+coef0 -> 6.0
+rmse -> 0.008459222050091713
+Best summary shape (6, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/classification/tune_svc_poly_fp_summary.csv
+Mean common metric 0.8389691002347072 global metric 0.8313668218408807
+global to common RMSE is 0.008459222050091713
+Summary shape (6, 4)
+Category shape (12, 3)
+
+## Processing file tune_weka_nb_mn.csv ###
+
+Found parameters ['featuresColumn']
+Results shape (16, 7)
+featuresColumn ['cdk_fp', 'rdkit_fp']
+Min summary shape (8, 7)
+Iterating over:
+featuresColumn: ['cdk_fp', 'rdkit_fp']
+Best common settings:
+featuresColumn -> rdkit_fp
+rmse -> 0.0045724888434594034
+Best summary shape (8, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/classification/tune_weka_nb_mn_summary.csv
+Mean common metric 0.772831350264776 global metric 0.7700572642013648
+global to common RMSE is 0.0045724888434594034
+Summary shape (8, 4)
+Category shape (16, 3)
+
+## Processing file tune_svc_rbf_desc.csv ###
+
+Found parameters ['gamma', 'scalerType', 'featuresColumn', 'C']
+Results shape (600, 10)
+gamma [0.10000000000000001, 0.01, 0.001, 0.0001, 1.0]
+scalerType ['Standard', 'MaxMin']
+featuresColumn ['cdk_desc', 'rdkit_desc']
+C [0.10000000000000001, 0.01, 0.001, 0.0001, 1.0]
+Min summary shape (6, 10)
+Iterating over:
+gamma: [0.10000000000000001, 0.01, 0.001, 0.0001, 1.0]
+scalerType: ['Standard', 'MaxMin']
+featuresColumn: ['cdk_desc', 'rdkit_desc']
+C: [0.10000000000000001, 0.01, 0.001, 0.0001, 1.0]
+Best common settings:
+gamma -> 0.01
+scalerType -> Standard
+featuresColumn -> cdk_desc
+C -> 1.0
+rmse -> 0.006336246329341641
+Best summary shape (6, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/classification/tune_svc_rbf_desc_summary.csv
+Mean common metric 0.8376933208580569 global metric 0.8325689106230979
+global to common RMSE is 0.006336246329341641
+Summary shape (6, 4)
+Category shape (12, 3)
+
+## Processing file tune_lrc_desc.csv ###
+
+Found parameters ['feature', 'elasticNetParam', 'maxIter', 'reg']
+Results shape (576, 10)
+feature ['cdk_desc', 'rdkit_desc']
+elasticNetParam [0.90000000000000002, 0.80000000000000004, 0.69999999999999996]
+maxIter [100, 50, 10]
+reg [0.029999999999999999, 0.10000000000000001, 0.01, 1.0]
+Min summary shape (8, 10)
+Iterating over:
+feature: ['cdk_desc', 'rdkit_desc']
+elasticNetParam: [0.90000000000000002, 0.80000000000000004, 0.69999999999999996]
+maxIter: [100, 50, 10]
+reg: [0.029999999999999999, 0.10000000000000001, 0.01, 1.0]
+Best common settings:
+feature -> rdkit_desc
+elasticNetParam -> 0.8
+maxIter -> 100
+reg -> 0.01
+rmse -> 0.022298529857544235
+Best summary shape (8, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/classification/tune_lrc_desc_summary.csv
+Mean common metric 0.7737575601033271 global metric 0.7607434157753734
+global to common RMSE is 0.022298529857544235
+Summary shape (8, 4)
+Category shape (16, 3)
+
+## Processing file tune_svc_lin_fp.csv ###
+
+Found parameters ['regularizationType', 'foldSize', 'featuresColumn', 'scalerType', 'C']
+Results shape (840, 11)
+regularizationType ['L1', 'L2']
+foldSize [1000, 2000, 1500]
+featuresColumn ['cdk_fp', 'rdkit_fp']
+scalerType ['Standard', 'MaxMin']
+C [0.10000000000000001, 0.01, 0.001, 10.0, 1.0]
+Min summary shape (7, 11)
+Iterating over:
+regularizationType: ['L1', 'L2']
+foldSize: [1000, 2000, 1500]
+featuresColumn: ['cdk_fp', 'rdkit_fp']
+scalerType: ['Standard', 'MaxMin']
+C: [0.10000000000000001, 0.01, 0.001, 10.0, 1.0]
+Best common settings:
+regularizationType -> L2
+foldSize -> 2000
+featuresColumn -> rdkit_fp
+scalerType -> Standard
+C -> 0.001
+rmse -> 0.027719672666546544
+Best summary shape (7, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/classification/tune_svc_lin_fp_summary.csv
+Mean common metric 0.8292463531273445 global metric 0.8047847273155849
+global to common RMSE is 0.027719672666546544
+Summary shape (7, 4)
+Category shape (14, 3)
+
+## Processing file tune_dtr.csv ###
+
+Found parameters ['feature', 'depth', 'bins']
+Results shape (600, 9)
+feature ['cdk_fp', 'cdk_desc', 'rdkit_desc', 'rdkit_fp']
+depth [30, 20, 15, 10, 5]
+bins [128, 64, 32]
+Min summary shape (10, 9)
+Iterating over:
+feature: ['cdk_fp', 'cdk_desc', 'rdkit_desc', 'rdkit_fp']
+depth: [30, 20, 15, 10, 5]
+bins: [128, 64, 32]
+Best common settings:
+feature -> rdkit_desc
+depth -> 5
+bins -> 32
+rmse -> 0.06589576619205477
+Best summary shape (10, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/regression/tune_dtr_summary.csv
+Mean common metric 0.7085599119943329 global metric 0.7615637695192429
+global to common RMSE is 0.06589576619205477
+Summary shape (10, 4)
+Category shape (20, 3)
+
+## Processing file tune_svr_rbf_desc.csv ###
+
+Found parameters ['gamma', 'scalerType', 'featuresColumn', 'C']
+Results shape (1000, 10)
+gamma [0.10000000000000001, 0.01, 0.001, 0.0001, 1.0]
+scalerType ['Standard', 'MaxMin']
+featuresColumn ['cdk_desc', 'rdkit_desc']
+C [0.10000000000000001, 0.01, 0.001, 0.0001, 1.0]
+Min summary shape (10, 10)
+Iterating over:
+gamma: [0.10000000000000001, 0.01, 0.001, 0.0001, 1.0]
+scalerType: ['Standard', 'MaxMin']
+featuresColumn: ['cdk_desc', 'rdkit_desc']
+C: [0.10000000000000001, 0.01, 0.001, 0.0001, 1.0]
+Best common settings:
+gamma -> 0.01
+scalerType -> Standard
+featuresColumn -> rdkit_desc
+C -> 1.0
+rmse -> 0.030651397528041167
+Best summary shape (10, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/regression/tune_svr_rbf_desc_summary.csv
+Mean common metric 0.632583463617537 global metric 0.6457577269929349
+global to common RMSE is 0.030651397528041167
+Summary shape (10, 4)
+Category shape (20, 3)
+
+## Processing file tune_svr_poly_fp.csv ###
+
+Found parameters ['degree', 'C', 'foldSize', 'featuresColumn', 'scalerType', 'coef0']
+Results shape (3840, 12)
+degree [3, 2]
+C [0.001, 0.10000000000000001, 0.01, 1.0]
+foldSize [2000, 1500, 1000]
+featuresColumn ['cdk_fp', 'rdkit_fp']
+scalerType ['MaxMin', 'Standard']
+coef0 [6.0, 4.0, 2.0, 0.0]
+Min summary shape (10, 12)
+Iterating over:
+degree: [3, 2]
+C: [0.001, 0.10000000000000001, 0.01, 1.0]
+foldSize: [2000, 1500, 1000]
+featuresColumn: ['cdk_fp', 'rdkit_fp']
+scalerType: ['MaxMin', 'Standard']
+coef0: [6.0, 4.0, 2.0, 0.0]
+Best common settings:
+degree -> 2
+C -> 0.1
+foldSize -> 2000
+featuresColumn -> rdkit_fp
+scalerType -> MaxMin
+coef0 -> 4.0
+rmse -> 0.02277423442420805
+Best summary shape (10, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/regression/tune_svr_poly_fp_summary.csv
+Mean common metric 0.6342566080067379 global metric 0.6546335909977011
+global to common RMSE is 0.02277423442420805
+Summary shape (10, 4)
+Category shape (20, 3)
+
+## Processing file tune_smile_rfr_desc.csv ###
+
+Found parameters ['numTrees', 'featuresColumn', 'maxNodes']
+Results shape (300, 9)
+numTrees [70, 60, 50, 40, 30]
+featuresColumn ['rdkit_desc', 'cdk_desc']
+maxNodes [1000, 5000, 10000]
+Min summary shape (10, 9)
+Iterating over:
+numTrees: [70, 60, 50, 40, 30]
+featuresColumn: ['rdkit_desc', 'cdk_desc']
+maxNodes: [1000, 5000, 10000]
+Best common settings:
+numTrees -> 40
+featuresColumn -> cdk_desc
+maxNodes -> 10000
+rmse -> 0.01725792620274277
+Best summary shape (10, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/regression/tune_smile_rfr_desc_summary.csv
+Mean common metric 0.6389006879877266 global metric 0.650727679072789
+global to common RMSE is 0.01725792620274277
+Summary shape (10, 4)
+Category shape (20, 3)
+
+## Processing file tune_weka_fold_rfr.csv ###
+
+Found parameters ['numTrees', 'featuresColumn', 'foldSize', 'maxDepth']
+Results shape (1500, 10)
+numTrees [70, 60, 50, 40, 30]
+featuresColumn ['cdk_fp', 'rdkit_fp']
+foldSize [2000, 1000, 500]
+maxDepth [50, 40, 30, 20, 15]
+Min summary shape (10, 10)
+Iterating over:
+numTrees: [70, 60, 50, 40, 30]
+featuresColumn: ['cdk_fp', 'rdkit_fp']
+foldSize: [2000, 1000, 500]
+maxDepth: [50, 40, 30, 20, 15]
+Best common settings:
+numTrees -> 70
+featuresColumn -> cdk_fp
+foldSize -> 500
+maxDepth -> 50
+rmse -> 0.016811454068507432
+Best summary shape (10, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/regression/tune_weka_fold_rfr_summary.csv
+Mean common metric 0.6513328642414706 global metric 0.6629627267882625
+global to common RMSE is 0.016811454068507432
+Summary shape (10, 4)
+Category shape (20, 3)
+
+## Processing file tune_gbt.csv ###
+
+Found parameters ['feature', 'maxIter', 'maxDepth', 'lossType']
+Results shape (720, 10)
+feature ['cdk_fp', 'cdk_desc', 'rdkit_desc', 'rdkit_fp']
+maxIter [50, 10, 5]
+maxDepth [20, 10, 5]
+lossType ['squared', 'absolute']
+Min summary shape (10, 10)
+Iterating over:
+feature: ['cdk_fp', 'cdk_desc', 'rdkit_desc', 'rdkit_fp']
+maxIter: [50, 10, 5]
+maxDepth: [20, 10, 5]
+lossType: ['squared', 'absolute']
+Best common settings:
+feature -> rdkit_fp
+maxIter -> 50
+maxDepth -> 5
+lossType -> squared
+rmse -> 0.07163127651465608
+Best summary shape (10, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/regression/tune_gbt_summary.csv
+Mean common metric 0.6568916919486926 global metric 0.6902151564111884
+global to common RMSE is 0.07163127651465608
+Summary shape (10, 4)
+Category shape (20, 3)
+
+## Processing file tune_glr_fp.csv ###
+
+Found parameters ['feature', 'nfolds', 'family', 'maxIter', 'reg']
+Results shape (1440, 11)
+feature ['cdk_fp', 'rdkit_fp']
+nfolds [2000, 1500, 1000]
+family ['gaussian', 'gamma']
+maxIter [100, 50, 10]
+reg [0.10000000000000001, 0.69999999999999996, 0.29999999999999999, 0.5]
+Min summary shape (10, 11)
+Iterating over:
+feature: ['cdk_fp', 'rdkit_fp']
+nfolds: [2000, 1500, 1000]
+family: ['gaussian', 'gamma']
+maxIter: [100, 50, 10]
+reg: [0.10000000000000001, 0.69999999999999996, 0.29999999999999999, 0.5]
+Best common settings:
+feature -> rdkit_fp
+nfolds -> 1500
+family -> gamma
+maxIter -> 10
+reg -> 0.1
+rmse -> 0.03840888479653884
+Best summary shape (10, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/regression/tune_glr_fp_summary.csv
+Mean common metric 0.6576672633715551 global metric 0.6854337404117576
+global to common RMSE is 0.03840888479653884
+Summary shape (10, 4)
+Category shape (20, 3)
+
+## Processing file tune_lr_desc.csv ###
+
+Found parameters ['feature', 'elasticNetParam', 'maxIter', 'reg']
+Results shape (900, 10)
+feature ['cdk_desc', 'rdkit_desc']
+elasticNetParam [0.90000000000000002, 0.80000000000000004, 0.69999999999999996]
+maxIter [100, 50, 10]
+reg [0.029999999999999999, 0.10000000000000001, 0.01, 1.0, 3.0]
+Min summary shape (10, 10)
+Iterating over:
+feature: ['cdk_desc', 'rdkit_desc']
+elasticNetParam: [0.90000000000000002, 0.80000000000000004, 0.69999999999999996]
+maxIter: [100, 50, 10]
+reg: [0.029999999999999999, 0.10000000000000001, 0.01, 1.0, 3.0]
+Best common settings:
+feature -> cdk_desc
+elasticNetParam -> 0.7
+maxIter -> 10
+reg -> 0.1
+rmse -> 0.04544523042424482
+Best summary shape (10, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/regression/tune_lr_desc_summary.csv
+Mean common metric 0.670992295342291 global metric 0.710628334440102
+global to common RMSE is 0.04544523042424482
+Summary shape (10, 4)
+Category shape (20, 3)
+
+## Processing file tune_lr_descs.csv ###
+
+Found parameters ['feature', 'elasticNetParam', 'maxIter', 'reg']
+Results shape (900, 10)
+feature ['cdk_desc', 'rdkit_desc']
+elasticNetParam [0.90000000000000002, 0.80000000000000004, 0.69999999999999996]
+maxIter [100, 50, 10]
+reg [0.029999999999999999, 0.10000000000000001, 0.01, 1.0, 3.0]
+Min summary shape (10, 10)
+Iterating over:
+feature: ['cdk_desc', 'rdkit_desc']
+elasticNetParam: [0.90000000000000002, 0.80000000000000004, 0.69999999999999996]
+maxIter: [100, 50, 10]
+reg: [0.029999999999999999, 0.10000000000000001, 0.01, 1.0, 3.0]
+Best common settings:
+feature -> cdk_desc
+elasticNetParam -> 0.7
+maxIter -> 100
+reg -> 0.1
+rmse -> 0.040503332560778316
+Best summary shape (10, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/regression/tune_lr_descs_summary.csv
+Mean common metric 0.6574057058566538 global metric 0.6892400132264711
+global to common RMSE is 0.040503332560778316
+Summary shape (10, 4)
+Category shape (20, 3)
+
+## Processing file tune_lr_fp.csv ###
+
+Found parameters ['feature', 'nfolds', 'elasticNetParam', 'maxIter', 'reg']
+Results shape (2700, 11)
+feature ['cdk_fp', 'rdkit_fp']
+nfolds [2000, 1500, 1000]
+elasticNetParam [0.80000000000000004, 0.69999999999999996, 0.90000000000000002]
+maxIter [100, 50, 10]
+reg [0.10000000000000001, 0.029999999999999999, 0.01, 1.0, 3.0]
+Min summary shape (10, 11)
+Iterating over:
+feature: ['cdk_fp', 'rdkit_fp']
+nfolds: [2000, 1500, 1000]
+elasticNetParam: [0.80000000000000004, 0.69999999999999996, 0.90000000000000002]
+maxIter: [100, 50, 10]
+reg: [0.10000000000000001, 0.029999999999999999, 0.01, 1.0, 3.0]
+Best common settings:
+feature -> rdkit_fp
+nfolds -> 2000
+elasticNetParam -> 0.7
+maxIter -> 50
+reg -> 0.03
+rmse -> 0.027861392152724727
+Best summary shape (10, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/regression/tune_lr_fp_summary.csv
+Mean common metric 0.6354322862937993 global metric 0.6577477494148575
+global to common RMSE is 0.027861392152724727
+Summary shape (10, 4)
+Category shape (20, 3)
+
+## Processing file tune_svr_rbf_fp.csv ###
+
+Found parameters ['gamma', 'foldSize', 'featuresColumn', 'scalerType', 'C']
+Results shape (3000, 11)
+gamma [0.001, 0.10000000000000001, 0.01, 0.0001, 1.0]
+foldSize [2000, 1500, 1000]
+featuresColumn ['cdk_fp', 'rdkit_fp']
+scalerType ['MaxMin', 'Standard']
+C [0.001, 0.10000000000000001, 0.01, 10.0, 1.0]
+Min summary shape (10, 11)
+Iterating over:
+gamma: [0.001, 0.10000000000000001, 0.01, 0.0001, 1.0]
+foldSize: [2000, 1500, 1000]
+featuresColumn: ['cdk_fp', 'rdkit_fp']
+scalerType: ['MaxMin', 'Standard']
+C: [0.001, 0.10000000000000001, 0.01, 10.0, 1.0]
+Best common settings:
+gamma -> 0.01
+foldSize -> 2000
+featuresColumn -> rdkit_fp
+scalerType -> MaxMin
+C -> 10.0
+rmse -> 0.024774426046729556
+Best summary shape (10, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/regression/tune_svr_rbf_fp_summary.csv
+Mean common metric 0.6265338688021466 global metric 0.6428405859304626
+global to common RMSE is 0.024774426046729556
+Summary shape (10, 4)
+Category shape (20, 3)
+
+## Processing file tune_svr_lin_desc.csv ###
+
+Found parameters ['C', 'featuresColumn', 'scalerType']
+Results shape (200, 9)
+C [0.001, 0.0001, 0.10000000000000001, 0.01, 1.0]
+featuresColumn ['rdkit_desc', 'cdk_desc']
+scalerType ['MaxMin', 'Standard']
+Min summary shape (10, 9)
+Iterating over:
+C: [0.001, 0.0001, 0.10000000000000001, 0.01, 1.0]
+featuresColumn: ['rdkit_desc', 'cdk_desc']
+scalerType: ['MaxMin', 'Standard']
+Best common settings:
+C -> 1.0
+featuresColumn -> rdkit_desc
+scalerType -> MaxMin
+rmse -> 0.03233370908515383
+Best summary shape (10, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/regression/tune_svr_lin_desc_summary.csv
+Mean common metric 0.6775951196882851 global metric 0.6970854468179377
+global to common RMSE is 0.03233370908515383
+Summary shape (10, 4)
+Category shape (20, 3)
+
+## Processing file tune_svr_lin_fp.csv ###
+
+Found parameters ['C', 'scalerType', 'featuresColumn', 'foldSize']
+Results shape (600, 10)
+C [0.10000000000000001, 0.01, 0.001, 10.0, 1.0]
+scalerType ['Standard', 'MaxMin']
+featuresColumn ['cdk_fp', 'rdkit_fp']
+foldSize [1000, 2000, 1500]
+Min summary shape (10, 10)
+Iterating over:
+C: [0.10000000000000001, 0.01, 0.001, 10.0, 1.0]
+scalerType: ['Standard', 'MaxMin']
+featuresColumn: ['cdk_fp', 'rdkit_fp']
+foldSize: [1000, 2000, 1500]
+Best common settings:
+C -> 0.1
+scalerType -> MaxMin
+featuresColumn -> cdk_fp
+foldSize -> 2000
+rmse -> 0.05326115189783317
+Best summary shape (10, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/regression/tune_svr_lin_fp_summary.csv
+Mean common metric 0.9028382814554515 global metric 0.9375504264899928
+global to common RMSE is 0.05326115189783317
+Summary shape (10, 4)
+Category shape (20, 3)
+
+## Processing file tune_glr_desc.csv ###
+
+Found parameters ['feature', 'family', 'maxIter', 'reg']
+Results shape (480, 10)
+feature ['cdk_desc', 'rdkit_desc']
+family ['gaussian', 'gamma']
+maxIter [100, 50, 10]
+reg [0.10000000000000001, 0.69999999999999996, 0.29999999999999999, 0.5]
+Min summary shape (10, 10)
+Iterating over:
+feature: ['cdk_desc', 'rdkit_desc']
+family: ['gaussian', 'gamma']
+maxIter: [100, 50, 10]
+reg: [0.10000000000000001, 0.69999999999999996, 0.29999999999999999, 0.5]
+Best common settings:
+feature -> cdk_desc
+family -> gaussian
+maxIter -> 10
+reg -> 0.7
+rmse -> 0.033080590401737525
+Best summary shape (10, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/regression/tune_glr_desc_summary.csv
+Mean common metric 0.6717496543702139 global metric 0.6938784024622148
+global to common RMSE is 0.033080590401737525
+Summary shape (10, 4)
+Category shape (20, 3)
+
+## Processing file tune_weka_rfr.csv ###
+
+Found parameters ['numTrees', 'featuresColumn', 'maxDepth']
+Results shape (1000, 9)
+numTrees [70, 60, 50, 40, 30]
+featuresColumn ['cdk_fp', 'cdk_desc', 'rdkit_desc', 'rdkit_fp']
+maxDepth [50, 40, 30, 20, 15]
+Min summary shape (10, 9)
+Iterating over:
+numTrees: [70, 60, 50, 40, 30]
+featuresColumn: ['cdk_fp', 'cdk_desc', 'rdkit_desc', 'rdkit_fp']
+maxDepth: [50, 40, 30, 20, 15]
+Best common settings:
+numTrees -> 50
+featuresColumn -> rdkit_desc
+maxDepth -> 20
+rmse -> 0.026048486724990237
+Best summary shape (10, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/regression/tune_weka_rfr_summary.csv
+Mean common metric 0.6181594537154358 global metric 0.6357403510282846
+global to common RMSE is 0.026048486724990237
+Summary shape (10, 4)
+Category shape (20, 3)
+
+## Processing file tune_rfr.csv ###
+
+Found parameters ['feature', 'depth', 'trees']
+Results shape (1920, 9)
+feature ['cdk_fp', 'cdk_desc', 'rdkit_desc', 'rdkit_fp']
+depth [30, 20, 15, 10, 5, 2]
+trees [70, 60, 50, 40, 30, 20, 10, 5]
+Min summary shape (10, 9)
+Iterating over:
+feature: ['cdk_fp', 'cdk_desc', 'rdkit_desc', 'rdkit_fp']
+depth: [30, 20, 15, 10, 5, 2]
+trees: [70, 60, 50, 40, 30, 20, 10, 5]
+Best common settings:
+feature -> rdkit_desc
+depth -> 15
+trees -> 60
+rmse -> 0.03728774952733586
+Best summary shape (10, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/regression/tune_rfr_summary.csv
+Mean common metric 0.5998908313710007 global metric 0.6288364196209341
+global to common RMSE is 0.03728774952733586
+Summary shape (10, 4)
+Category shape (20, 3)
+
+## Processing file tune_glr_fps.csv ###
+
+Found parameters ['feature', 'nfolds', 'family', 'maxIter', 'reg']
+Results shape (1440, 11)
+feature ['cdk_fp', 'rdkit_fp']
+nfolds [2000, 1500, 1000]
+family ['gaussian', 'gamma']
+maxIter [100, 50, 10]
+reg [0.10000000000000001, 0.69999999999999996, 0.29999999999999999, 0.5]
+Min summary shape (10, 11)
+Iterating over:
+feature: ['cdk_fp', 'rdkit_fp']
+nfolds: [2000, 1500, 1000]
+family: ['gaussian', 'gamma']
+maxIter: [100, 50, 10]
+reg: [0.10000000000000001, 0.69999999999999996, 0.29999999999999999, 0.5]
+Best common settings:
+feature -> rdkit_fp
+nfolds -> 1000
+family -> gaussian
+maxIter -> 100
+reg -> 0.5
+rmse -> 0.017648902880353257
+Best summary shape (10, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/regression/tune_glr_fps_summary.csv
+Mean common metric 0.6620829044004978 global metric 0.6778526693005491
+global to common RMSE is 0.017648902880353257
+Summary shape (10, 4)
+Category shape (20, 3)
+
+## Processing file tune_smile_rfr_fp.csv ###
+
+Found parameters ['numTrees', 'featuresColumn', 'foldSize', 'maxNodes']
+Results shape (900, 10)
+numTrees [70, 60, 50, 40, 30]
+featuresColumn ['cdk_fp', 'rdkit_fp']
+foldSize [1000, 2000, 500]
+maxNodes [1000, 5000, 10000]
+Min summary shape (10, 10)
+Iterating over:
+numTrees: [70, 60, 50, 40, 30]
+featuresColumn: ['cdk_fp', 'rdkit_fp']
+foldSize: [1000, 2000, 500]
+maxNodes: [1000, 5000, 10000]
+Best common settings:
+numTrees -> 50
+featuresColumn -> rdkit_fp
+foldSize -> 2000
+maxNodes -> 10000
+rmse -> 0.01556915708976636
+Best summary shape (10, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/regression/tune_smile_rfr_fp_summary.csv
+Mean common metric 0.6564148069613515 global metric 0.6674803396485736
+global to common RMSE is 0.01556915708976636
+Summary shape (10, 4)
+Category shape (20, 3)
+
+## Processing file tune_svr_poly_desc.csv ###
+
+Found parameters ['degree', 'C', 'featuresColumn', 'scalerType', 'coef0']
+Results shape (2880, 11)
+degree [3, 4, 2]
+C [0.01, 1.0000000000000001e-05, 0.10000000000000001, 0.0001, 1.0]
+featuresColumn ['cdk_desc', 'rdkit_desc']
+scalerType ['MaxMin', 'Standard']
+coef0 [8.0, 6.0, 4.0, 2.0]
+Min summary shape (10, 11)
+Iterating over:
+degree: [3, 4, 2]
+C: [0.01, 1.0000000000000001e-05, 0.10000000000000001, 0.0001, 1.0]
+featuresColumn: ['cdk_desc', 'rdkit_desc']
+scalerType: ['MaxMin', 'Standard']
+coef0: [8.0, 6.0, 4.0, 2.0]
+Best common settings:
+degree -> 2
+C -> 0.01
+featuresColumn -> rdkit_desc
+scalerType -> MaxMin
+coef0 -> 8.0
+rmse -> 0.045847985814964035
+Best summary shape (20, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/regression/tune_svr_poly_desc_summary.csv
+Mean common metric 0.6589099359475374 global metric 0.6878623730458208
+global to common RMSE is 0.045847985814964035
+Summary shape (20, 4)
+Category shape (30, 3)
+
+## Processing file tune_lr_fps.csv ###
+
+Found parameters ['feature', 'nfolds', 'elasticNetParam', 'maxIter', 'reg']
+Results shape (2700, 11)
+feature ['cdk_fp', 'rdkit_fp']
+nfolds [2000, 1500, 1000]
+elasticNetParam [0.80000000000000004, 0.69999999999999996, 0.90000000000000002]
+maxIter [100, 50, 10]
+reg [0.10000000000000001, 0.029999999999999999, 0.01, 1.0, 3.0]
+Min summary shape (10, 11)
+Iterating over:
+feature: ['cdk_fp', 'rdkit_fp']
+nfolds: [2000, 1500, 1000]
+elasticNetParam: [0.80000000000000004, 0.69999999999999996, 0.90000000000000002]
+maxIter: [100, 50, 10]
+reg: [0.10000000000000001, 0.029999999999999999, 0.01, 1.0, 3.0]
+Best common settings:
+feature -> rdkit_fp
+nfolds -> 2000
+elasticNetParam -> 0.7
+maxIter -> 10
+reg -> 0.03
+rmse -> 0.03376732241324027
+Best summary shape (10, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/regression/tune_lr_fps_summary.csv
+Mean common metric 0.6434359146493273 global metric 0.672105284249956
+global to common RMSE is 0.03376732241324027
+Summary shape (10, 4)
+Category shape (20, 3)
+
+## Processing file tune_svr_tanimoto_fp.csv ###
+
+Found parameters ['C', 'coef0', 'featuresColumn', 'degree']
+Results shape (1600, 10)
+C [0.10000000000000001, 0.01, 0.001, 10.0, 1.0]
+coef0 [3.0, 2.0, 1.0, 0.0]
+featuresColumn ['cdk_fp', 'rdkit_fp']
+degree [5, 4, 3, 2]
+Min summary shape (10, 10)
+Iterating over:
+C: [0.10000000000000001, 0.01, 0.001, 10.0, 1.0]
+coef0: [3.0, 2.0, 1.0, 0.0]
+featuresColumn: ['cdk_fp', 'rdkit_fp']
+degree: [5, 4, 3, 2]
+Best common settings:
+C -> 1.0
+coef0 -> 3.0
+featuresColumn -> rdkit_fp
+degree -> 2
+rmse -> 0.016006401683528196
+Best summary shape (10, 2)
+summary file is /home/gareth/src/os-models/jupyter-notebooks/summaries/regression/tune_svr_tanimoto_fp_summary.csv
+Mean common metric 0.6016827249217206 global metric 0.6138267650887844
+global to common RMSE is 0.016006401683528196
+Summary shape (10, 4)
+Category shape (20, 3)

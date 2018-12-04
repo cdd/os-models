@@ -1,0 +1,30 @@
+ [
+    {"file": "tox21_10k_data_all.sdf", "response": "NR-AR", "category": "discrete"},
+    {"file": "tox21_10k_data_all.sdf", "response": "NR-AhR", "category": "discrete"},
+    {"file": "tox21_10k_data_all.sdf", "response": "NR-AR-LBD", "category": "discrete"},
+    {"file": "tox21_10k_data_all.sdf", "response": "NR-ER", "category": "discrete"},
+    {"file": "tox21_10k_data_all.sdf", "response": "NR-ER-LBD", "category": "discrete"},
+    {"file": "tox21_10k_data_all.sdf", "response": "NR-Aromatase", "category": "discrete"},
+    {"file": "tox21_10k_data_all.sdf", "response": "NR-PPAR-gamma", "category": "discrete"},
+
+    {"file": "tox21_10k_data_all.sdf", "response": "SR-ARE", "category": "discrete"},
+    {"file": "tox21_10k_data_all.sdf", "response": "SR-ATAD5", "category": "discrete"},
+    {"file": "tox21_10k_data_all.sdf", "response": "SR-HSE", "category": "discrete"},
+    {"file": "tox21_10k_data_all.sdf", "response": "SR-MMP", "category": "discrete"},
+    {"file": "tox21_10k_data_all.sdf", "response": "SR-p53", "category": "discrete"},
+
+    {"file": "tox21_10k_challenge_test.sdf", "response": "NR-AR", "category": "discrete"},
+    {"file": "tox21_10k_challenge_test.sdf", "response": "NR-AhR", "category": "discrete"},
+    {"file": "tox21_10k_challenge_test.sdf", "response": "NR-AR-LBD", "category": "discrete"},
+    {"file": "tox21_10k_challenge_test.sdf", "response": "NR-ER", "category": "discrete"},
+    {"file": "tox21_10k_challenge_test.sdf", "response": "NR-ER-LBD", "category": "discrete"},
+    {"file": "tox21_10k_challenge_test.sdf", "response": "NR-Aromatase", "category": "discrete"},
+    {"file": "tox21_10k_challenge_test.sdf", "response": "NR-PPAR-gamma", "category": "discrete"},
+
+    {"file": "tox21_10k_challenge_test.sdf", "response": "SR-ARE", "category": "discrete"},
+    {"file": "tox21_10k_challenge_test.sdf", "response": "SR-ATAD5", "category": "discrete"},
+    {"file": "tox21_10k_challenge_test.sdf", "response": "SR-HSE", "category": "discrete"},
+    {"file": "tox21_10k_challenge_test.sdf", "response": "SR-MMP", "category": "discrete"},
+    {"file": "tox21_10k_challenge_test.sdf", "response": "SR-p53", "category": "discrete"}
+
+ ]

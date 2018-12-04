@@ -1,0 +1,57 @@
+# Eclipse
+.classpath
+.project
+.settings
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Maven
+/target
+
+# Misc
+/spark-warehouse
+hs_err_pid*.log
+*~
+*.swp
+.lck
+/notebooks
+/bae
+
+# python
+__pycache__
+.ipynb_checkpoints
+
+
+# Exclude Partial Documents
+/doc/Issues.md
+/doc/Notes.md
+
+# Only upload Tox21 consensus models from data folder
+
+/data/*
+!/data/Tox21
+/data/Tox21/*
+!/data/Tox21/recipe.json
+
+!/data/Tox21/consensus/
+/data/Tox21/consensus/*
+!/data/Tox21/consensus/consensus_model_*.obj
+
+!/data/Tox21/consensus_tuning/
+/data/Tox21/consensus_tuning/*
+!/data/Tox21/consensus_tuning/consensus_model_*.obj
+
+!/data/Tox21/consensus_including_scoring/
+/data/Tox21/consensus_including_scoring/*
+!/data/Tox21/consensus_including_scoring/consensus_model_*.obj
+
+!/data/Tox21/consensus_tuning_including_scoring/
+/data/Tox21/consensus_tuning_including_scoring/*
+!/data/Tox21/consensus_tuning_including_scoring/consensus_model_*.obj
+
+!/data/Tox21/tuning
+/data/Tox21/tuning/*
+!/data/Tox21/tuning/tune_*_classification.csv
