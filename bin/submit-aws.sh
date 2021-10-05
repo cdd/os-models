@@ -19,7 +19,7 @@ then
     mvn -Dmaven.test.skip=true -DskipTests clean install || { echo ' maven build failed'; exit 1; }
 
     echo "Copying compiled jar to S3"
-    aws s3 cp target/uber-os-models-1.0-SNAPSHOT.jar s3://os-models/jars/ || { echo 'copy to s3 failed'; exit 1; }
+    aws s3 cp target/uber-os-models-1.0-SNAPSHOT.jar [configured-s3-bucket]/jars/ || { echo 'copy to s3 failed'; exit 1; }
 
 fi
 
@@ -35,7 +35,7 @@ aws_command="aws emr create-cluster --applications Name=Ganglia Name=Spark Name=
 --use-default-roles \
 --enable-debugging \
 --log-uri 's3n://aws-logs-285083644164-us-west-2/elasticmapreduce/' \
---steps Type=Spark,Name=\"Spark Program $name\",ActionOnFailure=TERMINATE_JOB_FLOW,Args=[\"--deploy-mode\",\"cluster\",--class,com.cdd.spark.validation.$validation_class,s3://os-models2/jars/uber-os-models-1.0-SNAPSHOT.jar] \
+--steps Type=Spark,Name=\"Spark Program $name\",ActionOnFailure=TERMINATE_JOB_FLOW,Args=[\"--deploy-mode\",\"cluster\",--class,com.cdd.spark.validation.$validation_class,[configured-s3-bucket-2]/jars/uber-os-models-1.0-SNAPSHOT.jar] \
 --name 'Cluster $name' \
 --instance-groups '[{\"InstanceCount\":$instance_count,\"InstanceGroupType\":\"CORE\",\"InstanceType\":\"$instance_type\",\"Name\":\"Core Instance Group\"},{\"InstanceCount\":1,\"InstanceGroupType\":\"MASTER\",\"InstanceType\":\"$instance_type\",\"Name\":\"Master Instance Group\"}]' \
 --configurations '[{\"Classification\":\"spark\",\"Properties\":{\"maximizeResourceAllocation\":\"true\"},\"Configurations\":[]}]' \
@@ -49,7 +49,7 @@ aws_command="aws emr create-cluster --applications Name=Ganglia Name=Spark Name=
 --use-default-roles \
 --enable-debugging \
 --log-uri 's3n://aws-logs-285083644164-us-west-2/elasticmapreduce/' \
---steps Type=Spark,Name=\"Spark Program $name\",ActionOnFailure=TERMINATE_JOB_FLOW,Args=[\"--deploy-mode\",\"cluster\",--class,com.cdd.spark.validation.$validation_class,s3://os-models2/jars/uber-os-models-1.0-SNAPSHOT.jar] \
+--steps Type=Spark,Name=\"Spark Program $name\",ActionOnFailure=TERMINATE_JOB_FLOW,Args=[\"--deploy-mode\",\"cluster\",--class,com.cdd.spark.validation.$validation_class,[configured-s3-bucket-2]/jars/uber-os-models-1.0-SNAPSHOT.jar] \
 --name 'Cluster $name' \
 --instance-groups '[{\"InstanceCount\":$instance_count,\"InstanceGroupType\":\"CORE\",\"InstanceType\":\"$instance_type\",\"Name\":\"Core Instance Group\",\"BidPrice\":\"$bid_price\"},{\"InstanceCount\":1,\"InstanceGroupType\":\"MASTER\",\"InstanceType\":\"$instance_type\",\"Name\":\"Master Instance Group\",\"BidPrice\":\"$bid_price\"}]' \
 --configurations '[{\"Classification\":\"spark\",\"Properties\":{\"maximizeResourceAllocation\":\"true\"},\"Configurations\":[]}]' \

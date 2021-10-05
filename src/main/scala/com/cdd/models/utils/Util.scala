@@ -210,7 +210,7 @@ object Util extends HasLogging {
     new SparseVector(selectedIndices.length, sliceInds.toArray, sliceVals.toArray)
   }
 
-  def hadoopPath(): String = if (Configuration.runningInAws()) "s3://os-models2/" else "hdfs://localhost:9005/os-models"
+  def hadoopPath(): String = if (Configuration.runningInAws()) "[configured-s3-bucket-2]/" else "hdfs://localhost:9005/os-models"
 
   def hdfs(): FileSystem = FileSystem.get(new URI(hadoopPath()), Configuration.sparkContext.hadoopConfiguration)
 

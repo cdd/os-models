@@ -93,23 +93,23 @@ To get spark UI connect to Yarn ui on port 8088 and choose ApplicationMaster lin
 
 Aws copy jar-file
 ```
-aws s3 cp target/uber-os-models-1.0-SNAPSHOT.jar s3://os-models/jars/
+aws s3 cp target/uber-os-models-1.0-SNAPSHOT.jar [configured-s3-bucket]/jars/
 ```
 
 Aws pull results (in pipeline results)
 ```
-aws s3 sync s3://os-models/data/pipeline_results .`
+aws s3 sync [configured-s3-bucket]/data/pipeline_results .`
 ```
 
 Or download results
 ```
-aws s3  cp s3://os-models/data/pipeline_results/tune_glr_desc.parquet data/pipeline_results/tune_glr_desc.parquet --recursive
+aws s3  cp [configured-s3-bucket]/data/pipeline_results/tune_glr_desc.parquet data/pipeline_results/tune_glr_desc.parquet --recursive
 ```
 
 Upload parquet data directory:
 
 ```
-aws s3  cp ADMECaco2.parquet s3://os-models/data/continuous/ADMECaco2.parquet --recursive
+aws s3  cp ADMECaco2.parquet [configured-s3-bucket]/data/continuous/ADMECaco2.parquet --recursive
 ```
 
 #### Resourcing Spark
@@ -144,7 +144,7 @@ Links for allocating resources:
 
 
 ```
-aws emr create-cluster --applications Name=Spark --ec2-attributes '{"KeyName":"osmodels","InstanceProfile":"EMR_EC2_DefaultRole","AvailabilityZone":"us-west-2a","EmrManagedSlaveSecurityGroup":"sg-e809c692","EmrManagedMasterSecurityGroup":"sg-ca0dc2b0"}' --service-role EMR_DefaultRole --release-label emr-5.6.0 --steps '[{"Args":["spark-submit","--deploy-mode","cluster","--class","com.cdd.models.pipeline.tuning.TuneRandomForest","s3://os-models/jars/uber-os-models-1.0-SNAPSHOT.jar"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"Spark application"}]' --name 'Development Cluster' --instance-groups '[{"InstanceCount":4,"InstanceGroupType":"CORE","InstanceType":"m3.xlarge","Name":"CORE"},{"InstanceCount":1,"InstanceGroupType":"MASTER","InstanceType":"m3.xlarge","Name":"MASTER"}]' --configurations '[{"Classification":"spark","Properties":{"maximizeResourceAllocation":"true"},"Configurations":[]}]' --scale-down-behavior TERMINATE_AT_INSTANCE_HOUR --region us-west-2
+aws emr create-cluster --applications Name=Spark --ec2-attributes '{"KeyName":"osmodels","InstanceProfile":"EMR_EC2_DefaultRole","AvailabilityZone":"us-west-2a","EmrManagedSlaveSecurityGroup":"sg-e809c692","EmrManagedMasterSecurityGroup":"sg-ca0dc2b0"}' --service-role EMR_DefaultRole --release-label emr-5.6.0 --steps '[{"Args":["spark-submit","--deploy-mode","cluster","--class","com.cdd.models.pipeline.tuning.TuneRandomForest","[configured-s3-bucket]/jars/uber-os-models-1.0-SNAPSHOT.jar"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"Spark application"}]' --name 'Development Cluster' --instance-groups '[{"InstanceCount":4,"InstanceGroupType":"CORE","InstanceType":"m3.xlarge","Name":"CORE"},{"InstanceCount":1,"InstanceGroupType":"MASTER","InstanceType":"m3.xlarge","Name":"MASTER"}]' --configurations '[{"Classification":"spark","Properties":{"maximizeResourceAllocation":"true"},"Configurations":[]}]' --scale-down-behavior TERMINATE_AT_INSTANCE_HOUR --region us-west-2
 ```
 
 #### AWS command for GBT
@@ -154,7 +154,7 @@ In a new terminal `cdd_cmd AwsEnvironment 38123` (use the appropriate token).  T
 Build jar and copy to AWS:
 
 ```
-aws s3 cp target/uber-os-models-1.0-SNAPSHOT.jar s3://os-models/jars/
+aws s3 cp target/uber-os-models-1.0-SNAPSHOT.jar [configured-s3-bucket]/jars/
 ```
 
 
@@ -167,7 +167,7 @@ aws emr create-cluster --applications Name=Ganglia Name=Spark Name=Zeppelin \
 --use-default-roles \
 --enable-debugging \
 --log-uri 's3n://aws-logs-688102026996-us-west-2/elasticmapreduce/' \
---steps Type=Spark,Name="Spark Program GLR Tune",ActionOnFailure=TERMINATE_JOB_FLOW,Args=["--deploy-mode","cluster",--class,com.cdd.spark.validation.TuneGradientBoostedTreesRegression,s3://os-models/jars/uber-os-models-1.0-SNAPSHOT.jar] \
+--steps Type=Spark,Name="Spark Program GLR Tune",ActionOnFailure=TERMINATE_JOB_FLOW,Args=["--deploy-mode","cluster",--class,com.cdd.spark.validation.TuneGradientBoostedTreesRegression,[configured-s3-bucket]/jars/uber-os-models-1.0-SNAPSHOT.jar] \
 --name 'My cluster' \
 --instance-groups '[{"InstanceCount":2,"InstanceGroupType":"CORE","InstanceType":"m3.xlarge","Name":"Core Instance Group"},\
 {"InstanceCount":1,"InstanceGroupType":"MASTER","InstanceType":"m3.xlarge","Name":"Master Instance Group"}]' \
@@ -187,7 +187,7 @@ aws emr create-cluster --applications Name=Ganglia Name=Spark Name=Zeppelin \
 --use-default-roles \
 --enable-debugging \
 --log-uri 's3n://aws-logs-688102026996-us-west-2/elasticmapreduce/' \
---steps Type=Spark,Name="Spark Program GLR Tune",ActionOnFailure=TERMINATE_JOB_FLOW,Args=["--deploy-mode","cluster",--class,com.cdd.spark.validation.TuneGradientBoostedTreesRegression,s3://os-models/jars/uber-os-models-1.0-SNAPSHOT.jar] \
+--steps Type=Spark,Name="Spark Program GLR Tune",ActionOnFailure=TERMINATE_JOB_FLOW,Args=["--deploy-mode","cluster",--class,com.cdd.spark.validation.TuneGradientBoostedTreesRegression,[configured-s3-bucket]/jars/uber-os-models-1.0-SNAPSHOT.jar] \
 --name 'My cluster' \
 --instance-groups '[{"InstanceCount":2,"InstanceGroupType":"CORE","InstanceType":"m3.xlarge","Name":"Core Instance Group","BidPrice":"0.75"},{"InstanceCount":1,"InstanceGroupType":"MASTER","InstanceType":"m3.xlarge","Name":"Master Instance Group","BidPrice":"0.75"}]' \
 --configurations '[{"Classification":"spark","Properties":{"maximizeResourceAllocation":"true"},"Configurations":[]}]' \
@@ -206,7 +206,7 @@ aws emr create-cluster --applications Name=Ganglia Name=Spark Name=Zeppelin \
 --use-default-roles \
 --enable-debugging \
 --log-uri 's3n://aws-logs-688102026996-us-west-2/elasticmapreduce/' \
---steps Type=Spark,Name="Spark Program RLC Tune",ActionOnFailure=TERMINATE_JOB_FLOW,Args=["--deploy-mode","cluster",--class,com.cdd.spark.validation.TuneNaiveBayes,s3://os-models/jars/uber-os-models-1.0-SNAPSHOT.jar] \
+--steps Type=Spark,Name="Spark Program RLC Tune",ActionOnFailure=TERMINATE_JOB_FLOW,Args=["--deploy-mode","cluster",--class,com.cdd.spark.validation.TuneNaiveBayes,[configured-s3-bucket]/jars/uber-os-models-1.0-SNAPSHOT.jar] \
 --name 'My cluster NB' \
 --instance-groups '[{"InstanceCount":2,"InstanceGroupType":"CORE","InstanceType":"m3.xlarge","Name":"Core Instance Group","BidPrice":"0.75"},{"InstanceCount":1,"InstanceGroupType":"MASTER","InstanceType":"m3.xlarge","Name":"Master Instance Group","BidPrice":"0.75"}]' \
 --configurations '[{"Classification":"spark","Properties":{"maximizeResourceAllocation":"true"},"Configurations":[]}]' \
@@ -225,7 +225,7 @@ aws emr create-cluster --applications Name=Ganglia Name=Spark Name=Zeppelin \
 --use-default-roles \
 --enable-debugging \
 --log-uri 's3n://aws-logs-688102026996-us-west-2/elasticmapreduce/' \
---steps Type=Spark,Name="Spark Program LRC Tune",ActionOnFailure=TERMINATE_JOB_FLOW,Args=["--deploy-mode","cluster",--class,com.cdd.spark.validation.TuneLogisiticRegressionClassifier,s3://os-models/jars/uber-os-models-1.0-SNAPSHOT.jar] \
+--steps Type=Spark,Name="Spark Program LRC Tune",ActionOnFailure=TERMINATE_JOB_FLOW,Args=["--deploy-mode","cluster",--class,com.cdd.spark.validation.TuneLogisiticRegressionClassifier,[configured-s3-bucket]/jars/uber-os-models-1.0-SNAPSHOT.jar] \
 --name 'My cluster LRC' \
 --instance-groups '[{"InstanceCount":2,"InstanceGroupType":"CORE","InstanceType":"m3.xlarge","Name":"Core Instance Group","BidPrice":"0.75"},{"InstanceCount":1,"InstanceGroupType":"MASTER","InstanceType":"m3.xlarge","Name":"Master Instance Group","BidPrice":"0.75"}]' \
 --configurations '[{"Classification":"spark","Properties":{"maximizeResourceAllocation":"true"},"Configurations":[]}]' \
@@ -243,7 +243,7 @@ aws emr create-cluster --applications Name=Ganglia Name=Spark Name=Zeppelin \
 --use-default-roles \
 --enable-debugging \
 --log-uri 's3n://aws-logs-688102026996-us-west-2/elasticmapreduce/' \
---steps Type=Spark,Name="Spark Program LR Tune",ActionOnFailure=TERMINATE_JOB_FLOW,Args=["--deploy-mode","cluster",--class,com.cdd.spark.validation.TuneLinearRegression,s3://os-models/jars/uber-os-models-1.0-SNAPSHOT.jar] \
+--steps Type=Spark,Name="Spark Program LR Tune",ActionOnFailure=TERMINATE_JOB_FLOW,Args=["--deploy-mode","cluster",--class,com.cdd.spark.validation.TuneLinearRegression,[configured-s3-bucket]/jars/uber-os-models-1.0-SNAPSHOT.jar] \
 --name 'My cluster Linear Regression' \
 --instance-groups '[{"InstanceCount":2,"InstanceGroupType":"CORE","InstanceType":"m3.xlarge","Name":"Core Instance Group","BidPrice":"0.75"},{"InstanceCount":1,"InstanceGroupType":"MASTER","InstanceType":"m3.xlarge","Name":"Master Instance Group","BidPrice":"0.75"}]' \
 --configurations '[{"Classification":"spark","Properties":{"maximizeResourceAllocation":"true"},"Configurations":[]}]' \
@@ -261,7 +261,7 @@ aws emr create-cluster --applications Name=Ganglia Name=Spark Name=Zeppelin \
 --use-default-roles \
 --enable-debugging \
 --log-uri 's3n://aws-logs-688102026996-us-west-2/elasticmapreduce/' \
---steps Type=Spark,Name="Spark Program LR Descriptors Tune",ActionOnFailure=TERMINATE_JOB_FLOW,Args=["--deploy-mode","cluster",--class,com.cdd.spark.validation.TuneLinearRegressionDescriptors,s3://os-models/jars/uber-os-models-1.0-SNAPSHOT.jar] \
+--steps Type=Spark,Name="Spark Program LR Descriptors Tune",ActionOnFailure=TERMINATE_JOB_FLOW,Args=["--deploy-mode","cluster",--class,com.cdd.spark.validation.TuneLinearRegressionDescriptors,[configured-s3-bucket]/jars/uber-os-models-1.0-SNAPSHOT.jar] \
 --name 'My cluster Linear Regression on Descriptors' \
 --instance-groups '[{"InstanceCount":2,"InstanceGroupType":"CORE","InstanceType":"m3.xlarge","Name":"Core Instance Group","BidPrice":"0.75"},{"InstanceCount":1,"InstanceGroupType":"MASTER","InstanceType":"m3.xlarge","Name":"Master Instance Group","BidPrice":"0.75"}]' \
 --configurations '[{"Classification":"spark","Properties":{"maximizeResourceAllocation":"true"},"Configurations":[]}]' \
