@@ -47,7 +47,6 @@ trait EpochNeuralNetworkEstimator
     val trainingSet = dataTableToMlDataSet(dataTable)
     val noFeatures = trainingSet.getInputSize
 
-    // see https://s3.amazonaws.com/heatonresearch-books/free/encog-3_3-quickstart.pdf
     val hasBias = true
     val network = new BasicNetwork
     network.addLayer(new BasicLayer(new ActivationSigmoid, hasBias, noFeatures))
